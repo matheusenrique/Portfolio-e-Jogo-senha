@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>Jogo Senha</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <header>
+        <h1>Jogo Senha</h1>
+    </header>
+
+    <section>
+        <div class="game-container">
+            <h2>Adivinhe a Senha!</h2>
+            <p>Digite uma senha de 4 dígitos:</p>
+            <input type="text" id="guess" maxlength="4">
+            <button>Tentar</button>
+            <div id="feedback"></div>
+        </div>
+    </section>
+
+    <script>
+        let senha = generateRandomPassword();
+
+        function generateRandomPassword() {
+            let senha = "";
+            for (let i = 0; i < 4; i++) {
+                senha += Math.floor(Math.random() * 10); 
+            }
+            return senha;
+        }
+
+        
+    </script>
+</body>
+</html>
+
+
